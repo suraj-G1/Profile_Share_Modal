@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.circle1{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: rgb(239, 239, 176); 
+    ;
+    border-radius: 50%;
+    top:15%;
+    left: 30%;
+    animation:moveAndScale 15s ease-in-out infinite;
+
+}
+.circle2{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+    background-color: #f46641;
+    
+    border-radius: 50%;
+    top:60%;
+    left: 55%; 
+    animation: moveAndScale 15s ease-in-out infinite;
+}
+
+@keyframes moveAndScale {
+  0% {
+    transform: translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.1);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+  
+.wrapper{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color:#000;
+    opacity: 1;
+}
+.card-wrapper{
+    height: 400px;
+    width: 300px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    background-color: #ffffff1a;
+    border-radius: 5%;
+    gap: 2rem;
+    
+    align-items: center;
+    
+}
+.socialMedia h3{
+    font-weight: 800;
+}
+
+.bottom-group{
+    display: flex;
+    gap: 1rem;
+}
+.shareProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color:#ffffffb9;
+    border: 2px solid white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out;
+    padding: 6px 8px;
+}
+.shareProfile:hover{
+    background-color: white;
+    color:#000;
+}
+.followMe{
+    color: #ffffffb9;
+    border: 2px solid white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #ffffff00;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out;
+    padding: 6px 8px;
+
+}
+.followMe:hover{
+    background-color: white;
+  
+    color: #000;
+}
+
+.userName{
+
+    /* font-size: larger; */
+    color: white;
+    font: 800;
+    font-size: 30px;
+    font-weight: bold;
+}
+.position{
+    color: white;
+    font:bold;
+}
+
+.profile{
+    position: relative;
+
+}
+.profileImage{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.via{
+    color: white;
+    font-weight: 400;
+    font-size: large;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* height: 100px; */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 2px solid #ffffff59;
+    translate: -50% -50%;
+    border-radius: 20px;
+    padding: 25px 25px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    scale: 0;
+    transition:0.5s ease-in-out;
+
+    
+}
+
+.overlay{
+    position:fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    right: 0;
+    transition:all 0.5s ease ;
+    pointer-events: none;
+    background-color: #5f5f5f83;
+}
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+.active{
+    scale: 1;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+}
+
+.crossButton{
+    height: 30px;
+    cursor: pointer;
+
+}
+
+.crossButton i{
+    font-size: 18px;
+    color: white;
+}
+.socialMedia{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+}
+.icon{
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 40px;
+    padding: 17px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    text-decoration: none;
+    gap: 10px;
+    margin-bottom: 25px;
+    transition: all 0.5s;
+}
+.icon-container{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-around;
+}
+
+.profileShare{
+    font-size: 30px;
+    font-weight: 700;  
+    color: white;
+}
+
+.icon i{
+    font-size: 27px;
+}
+#facebook{
+    
+    color:#1771e6;
+    border:1px solid #1771e6;
+}
+#facebook:hover{
+    color: white;
+    background-color: #1771e6;
+    transition: all 600ms ease-in-out;
+}
+#twitter{
+    color: #1c99e6;
+    border:1px solid #1c99e6;
+}
+#twitter:hover{
+    color: white;
+    background-color: #1c99e6;
+    transition: all 600ms ease;
+}
+#instagram{
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+#instagram:hover{
+    color: white;
+    background-color: #cb2770;
+    transition: all 600ms ease;
+}
+
+#whatsApp{
+    color: #2fe664;
+    border: 1px solid #2fe664;
+
+}
+#whatsApp:hover{
+    color: white;
+    background-color: #2fe664;
+    transition: all 600ms ease;
+}
+#telegram{
+    color: #0081c2;
+    border: 1px solid #0081c2;
+    
+}
+#telegram:hover{
+    color: white;
+    background-color: #0081c2;
+    transition: all 600ms ease;
+}
